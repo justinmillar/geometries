@@ -29,7 +29,7 @@ for(i in 1:length(ad1_files)){
   shp1 <- st_read(ad1_files[i], quiet = T)
   
   # Get boundary shapefile
-  shp0 <- st_geometry(ms_dissolve(shp))
+  shp0 <- st_geometry(ms_dissolve(shp1))
   
   # Create Adm0 country folder
   cd <- path("adm0", ad1_ctys[i])
@@ -66,7 +66,7 @@ for(i in 1:length(ad2_files)){
   shp1 <- st_read(ad2_files[i], quiet = T)
   
   # Get boundary shapefile
-  shp0 <- st_geometry(ms_dissolve(shp))
+  shp0 <- st_geometry(ms_dissolve(shp0))
   
   # Create Adm0 country folder
   cd <- path("adm0", ad2_ctys[i])
